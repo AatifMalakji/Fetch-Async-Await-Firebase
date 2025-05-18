@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Async Await CRUD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+    .loader{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,.5);
+    }
+</style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form id="postform">
+                        <div class="form-group"><label for="title">Title</label><input class="form-control" type="text" id="title"></div>
+                        <div class="form-group"><label for="content">Content</label><textarea class="form-control" rows="4" type="text" id="content"> </textarea></div>
+                        <button class="btn btn-outline-info" id="submitbtn">Add Post</button>
+                        <button class="btn btn-outline-warning d-none" type="button" id="updatebtn">Update Post</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="postcontainer">
+        
+    </div>
+  </div>
+
+  <div class="loader d-none" id="loader">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
